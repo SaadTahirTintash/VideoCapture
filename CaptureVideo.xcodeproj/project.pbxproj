@@ -13,6 +13,7 @@
 		4A43A1B0230D15BB004AE8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A43A1AF230D15BB004AE8AA /* Assets.xcassets */; };
 		4A43A1B3230D15BB004AE8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A43A1B1230D15BB004AE8AA /* LaunchScreen.storyboard */; };
 		4A43A1BB230D1943004AE8AA /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A1BA230D1943004AE8AA /* PreviewView.swift */; };
+		4A43A1C7230D6B1D004AE8AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A1C6230D6B1D004AE8AA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4A43A1B2230D15BB004AE8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A43A1B4230D15BB004AE8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A43A1BA230D1943004AE8AA /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		4A43A1C6230D6B1D004AE8AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4A43A1A8230D15BA004AE8AA /* AppDelegate.swift */,
 				4A43A1AC230D15BA004AE8AA /* Main.storyboard */,
 				4A43A1AA230D15BA004AE8AA /* ViewController.swift */,
+				4A43A1C6230D6B1D004AE8AA /* Extensions.swift */,
 				4A43A1BA230D1943004AE8AA /* PreviewView.swift */,
 				4A43A1AF230D15BB004AE8AA /* Assets.xcassets */,
 				4A43A1B1230D15BB004AE8AA /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				4A43A1AB230D15BA004AE8AA /* ViewController.swift in Sources */,
 				4A43A1A9230D15BA004AE8AA /* AppDelegate.swift in Sources */,
 				4A43A1BB230D1943004AE8AA /* PreviewView.swift in Sources */,
+				4A43A1C7230D6B1D004AE8AA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

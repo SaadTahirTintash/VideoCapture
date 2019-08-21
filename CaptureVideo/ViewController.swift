@@ -12,10 +12,11 @@ import Foundation
 
 //For a simple camera capturing application, you need a CaptureSession, atleast one input and atleast one output device. To show what the user is seeing, we need a PreviewLayer
 
-class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var captureButton: UIButton!
+    @IBOutlet weak var videoPreviewImage: UIImageView!
     
     var captureSession : AVCaptureSession!
     var videoDataOutput: AVCaptureVideoDataOutput!
@@ -46,12 +47,16 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
             
             //configure Output device
             videoDataOutput = AVCaptureVideoDataOutput()
+            videoDataOutput.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString) as String: kCMPixelFormat_32BGRA]
+            
+            let sampleBufferQueue = DispatchQueue(label: "sample buffer")
+            videoDataOutput.setSampleBufferDelegate(self, queue: sampleBufferQueue)
             
             //add input/output devices
             if captureSession.canAddInput(videoDeviceInput), captureSession.canAddOutput(videoDataOutput) {
                 captureSession.addInput(videoDeviceInput)
                 captureSession.addOutput(videoDataOutput)
-                captureSession.addOutput(movieOutput)
+//                captureSession.addOutput(movieOutput)
                 //add preview layer
                 setupLivePreview()
             }
@@ -95,6 +100,9 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
             captureButton.backgroundColor = .red
         }
     }
+}
+
+extension ViewController : AVCaptureFileOutputRecordingDelegate {
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
         guard error == nil else {
@@ -106,4 +114,22 @@ class ViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     }
 
 }
+
+extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        let ciImage = CIImage(cvImageBuffer: imageBuffer)
+        
+        let context = CIContext()
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return }
+        
+        let image = UIImage(cgImage: cgImage).rotate(radians: .pi/2) //Rotate 90 deg
+        DispatchQueue.main.async { [weak self] in
+            self?.videoPreviewImage.image = image
+        }
+    }
+}
+
 

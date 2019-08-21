@@ -20,35 +20,49 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-wg-9bG" customClass="PreviewView" customModule="CaptureVideo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Sj-sQ-mFU">
+                                        <rect key="frame" x="254" y="686" width="150" height="200"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="223-sC-u7P"/>
+                                            <constraint firstAttribute="height" constant="200" id="Cfc-R8-z4n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-qB-H4h">
+                                        <rect key="frame" x="169.5" y="796" width="75" height="75"/>
+                                        <color key="backgroundColor" red="1" green="0.084393614219999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="85P-iK-pEL"/>
+                                            <constraint firstAttribute="width" constant="75" id="9wE-0Z-3mE"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="37.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapToRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GeL-WD-2FK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.7551699288" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-qB-H4h">
-                                <rect key="frame" x="169.5" y="772" width="75" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.084393614219999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="85P-iK-pEL"/>
-                                    <constraint firstAttribute="width" constant="75" id="9wE-0Z-3mE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lxk-qB-H4h" secondAttribute="bottom" constant="25" id="5cM-bc-kt2"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Sj-sQ-mFU" secondAttribute="trailing" constant="10" id="QrZ-77-99F"/>
+                                    <constraint firstItem="Lxk-qB-H4h" firstAttribute="centerX" secondItem="ucL-wg-9bG" secondAttribute="centerX" id="UDb-We-bBO"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Sj-sQ-mFU" secondAttribute="bottom" constant="10" id="zjg-1s-gQj"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <real key="value" value="37.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didTapToRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GeL-WD-2FK"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ucL-wg-9bG" secondAttribute="bottom" id="3Eq-Bd-B6p"/>
-                            <constraint firstItem="Lxk-qB-H4h" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-15" id="CUc-RL-MOn"/>
                             <constraint firstItem="ucL-wg-9bG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DHQ-Wl-fqX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ucL-wg-9bG" secondAttribute="trailing" id="Ftv-SZ-z5z"/>
-                            <constraint firstItem="Lxk-qB-H4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TLZ-wM-cSz"/>
                             <constraint firstItem="ucL-wg-9bG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w5f-YQ-Wrx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +70,7 @@
                     <connections>
                         <outlet property="captureButton" destination="Lxk-qB-H4h" id="DcD-ti-WhR"/>
                         <outlet property="previewView" destination="ucL-wg-9bG" id="j2e-Lg-Jla"/>
+                        <outlet property="videoPreviewImage" destination="4Sj-sQ-mFU" id="gRn-en-DZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
