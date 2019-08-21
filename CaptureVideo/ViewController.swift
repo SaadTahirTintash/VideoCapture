@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Check commit")
     }
     
     override func viewDidAppear(_ animated: Bool) {
