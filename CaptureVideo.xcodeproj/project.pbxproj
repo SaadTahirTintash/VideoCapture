@@ -12,6 +12,7 @@
 		4A43A1AE230D15BA004AE8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A43A1AC230D15BA004AE8AA /* Main.storyboard */; };
 		4A43A1B0230D15BB004AE8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A43A1AF230D15BB004AE8AA /* Assets.xcassets */; };
 		4A43A1B3230D15BB004AE8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A43A1B1230D15BB004AE8AA /* LaunchScreen.storyboard */; };
+		4A43A1BB230D1943004AE8AA /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A43A1BA230D1943004AE8AA /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4A43A1AF230D15BB004AE8AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A43A1B2230D15BB004AE8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A43A1B4230D15BB004AE8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A43A1BA230D1943004AE8AA /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				4A43A1A8230D15BA004AE8AA /* AppDelegate.swift */,
-				4A43A1AA230D15BA004AE8AA /* ViewController.swift */,
 				4A43A1AC230D15BA004AE8AA /* Main.storyboard */,
+				4A43A1AA230D15BA004AE8AA /* ViewController.swift */,
+				4A43A1BA230D1943004AE8AA /* PreviewView.swift */,
 				4A43A1AF230D15BB004AE8AA /* Assets.xcassets */,
 				4A43A1B1230D15BB004AE8AA /* LaunchScreen.storyboard */,
 				4A43A1B4230D15BB004AE8AA /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				4A43A1AB230D15BA004AE8AA /* ViewController.swift in Sources */,
 				4A43A1A9230D15BA004AE8AA /* AppDelegate.swift in Sources */,
+				4A43A1BB230D1943004AE8AA /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
