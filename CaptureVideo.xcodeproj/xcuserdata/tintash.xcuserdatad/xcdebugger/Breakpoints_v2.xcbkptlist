@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CaptureVideo/ImageConversion.swift"
+            timestampString = "588253056.420665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "imageFromARGB32Bitmap(pixels:width:height:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CaptureVideo):CaptureVideo.ImageConversion.(imageFromARGB32Bitmap in _2A739784988B73B7A9762947AB9960D1)(pixels: Swift.Array&lt;CaptureVideo.PixelData&gt;, width: Swift.Int, height: Swift.Int) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "CaptureVideo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tintash/Documents/Training/My%20Projects/CaptureVideo/CaptureVideo/ImageConversion.swift"
+                  timestampString = "588253102.01641"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CaptureVideo):CaptureVideo.ImageConversion.(imageFromARGB32Bitmap in _2A739784988B73B7A9762947AB9960D1)(pixels: Swift.Array&lt;CaptureVideo.PixelData&gt;, width: Swift.Int, height: Swift.Int) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "CaptureVideo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tintash/Documents/Training/My%20Projects/CaptureVideo/CaptureVideo/ImageConversion.swift"
+                  timestampString = "588253102.018225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "744">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
